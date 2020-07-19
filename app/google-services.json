@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "370557090375",
+    "firebase_url": "https://gmaptutorial.firebaseio.com",
+    "project_id": "gmaptutorial",
+    "storage_bucket": "gmaptutorial.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370557090375:android:6ae2f3ea71b93bfc5c8f62",
+        "android_client_info": {
+          "package_name": "com.example.testmap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "370557090375-5btgig6fsenrhq7vm9t3bhnkv1pkj34t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwlA1bxDl0roCftEblnaUhiuWAa5UIRQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "370557090375-5btgig6fsenrhq7vm9t3bhnkv1pkj34t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
