@@ -1,14 +1,32 @@
 package com.example.testmap;
 
 public class Datas {
-    String quality,quantity,cost;
+    String quality,quantity,cost,bunkName,date;
     public  Datas(){
 
     }
-    public Datas(String quality,String quantity,String cost){
+    public Datas(String bunkName,String date,String quality,String quantity,String cost){
+        this.bunkName=bunkName;
+        this.date=date;
         this.quality=quality;
         this.quantity=quantity;
         this.cost=cost;
+    }
+
+    public String getBunkName() {
+        return bunkName;
+    }
+
+    public void setBunkName(String bunkName) {
+        this.bunkName = bunkName;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getQuality() {

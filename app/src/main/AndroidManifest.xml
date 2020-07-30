@@ -14,6 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".BunkDetails"></activity>
+        <activity android:name=".History" />
+        <activity android:name=".DashBoard" />
+        <activity android:name=".SetpasswordAct" />
+        <activity android:name=".LoginAct" />
+        <activity android:name=".VerificationAct" />
+        <activity android:name=".SensorAct" />
+        <activity android:name=".Signup" />
         <activity android:name=".UpdateData" />
         <activity android:name=".MapActivity" />
 

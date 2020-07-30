@@ -1,19 +1,20 @@
 package com.example.testmap;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 
 public class UpdateData extends AppCompatActivity {
@@ -41,36 +42,44 @@ public class UpdateData extends AppCompatActivity {
         pet=findViewById(R.id.pet);
         update=findViewById(R.id.save);
 
-        txt0.setText("QUALITY:");
-        txt1.setText("QUANTY:");
-        txt2.setText("COST:");
-        txt3.setText("BUNK NAME:");
+        updt.setText("UPDATED DATA");
+        txt3.setText("QUALITY:");
+        txt2.setText("QUANTITY:");
+        txt1.setText("COST:");
+        txt0.setText("BUNK NAME:");
 
         Random number = new Random();
         float l = number.nextFloat();
         int num = number.nextInt(50);
         final float qltyy = 100-l*num;
         final int qntyy = number.nextInt(10);
-        final float cost = (float) (qntyy*76.3);
+        final float cost = (float) (qntyy*86.3);
         qlty1.setText(String.valueOf(qltyy));
         qnty1.setText(String.valueOf(qntyy));
         cst1.setText(String.valueOf(cost));
         Intent intent = getIntent();
-        final String bunkNam = intent.getStringExtra("BunkName");
-        pet.setText(bunkNam);
+        final String bunkName = intent.getStringExtra("BunkName");
+        pet.setText(bunkName);
 
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 rootnode = FirebaseDatabase.getInstance();
                 referenceNode = rootnode.getReference("updated Data");
+                SimpleDateFormat sp = new SimpleDateFormat("dd/MM/YYYY");
+                Date dates = new Date();
+                String date=sp.format(dates);
                 String quality=String.valueOf(qltyy);
                 String quantity=String.valueOf(qntyy);
                 String costt=String.valueOf(cost);
-                Datas datas = new Datas(quality,quantity,costt);
-                referenceNode.child(bunkNam).setValue(datas);
+                Datas datas = new Datas(bunkName,date,quality,quantity,costt);
+                referenceNode.child(bunkName).setValue(datas);
+                Intent historyy=new Intent(UpdateData.this,DashBoard.class);
+                historyy.putExtra("bunk_name",bunkName);
+                startActivity(historyy);
                 getClear();
                 Toast.makeText(UpdateData.this,"data updated",Toast.LENGTH_SHORT).show();
+                finish();
             }
 
             private void getClear() {

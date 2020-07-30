@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -16,6 +17,10 @@ import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RatingBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -31,6 +36,9 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolygonOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 
 import java.util.ArrayList;
 
@@ -38,7 +46,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener, GoogleMap.OnInfoWindowClickListener{
-
     private GoogleMap mMap;
     private GoogleApiClient client;
     private LocationRequest locationRequest;
@@ -46,17 +53,19 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     public static final int REQUEST_LOCATION_CODE = 99;
     int PROXIMITY_RADIUS = 5000;
     double latitude,longitude;
-    //private List<Polyline> polylines=null;
+    Polyline polyline = null;
+    LatLng latLng;
     ArrayList<LatLng> arrayList = new ArrayList<LatLng>();
     LatLng RR = new LatLng(10.110457,78.820328);
     LatLng HP = new LatLng(10.101053,78.840181);
     LatLng IN = new LatLng(10.099726,78.849584);
     LatLng BH = new LatLng(10.120343,78.792078);
     ArrayList<String> title = new ArrayList<>();
-    String rr = "RR";
-    String hp = "HP";
-    String in = "IN";
-    String bh = "BH";
+    String rr = "ESSR PETROLEUM";
+    String hp = "HINDUSTHAN PETROLEUM";
+    String in = "INDIAN OIL";
+    String bh = "BHARAT PETROLEUM";
+    String msg=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,7 +79,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         title.add(in);
         title.add(bh);
         checkLocationPermission();
-
+        Log.d("wrk","msg");
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.maps);
 
@@ -101,14 +110,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     public void onMapReady(GoogleMap googleMap) {
         mMap=googleMap;
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        for(int i = 0;i<arrayList.size();i++){
-            mMap.addMarker(new MarkerOptions().position(arrayList.get(i))
-                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
-                    .title(title.get(i)));
-            mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(arrayList.get(i)));
-        }
-        mMap.setOnInfoWindowClickListener(this);
+
         //Initialize Google Play Services
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION)
@@ -156,14 +158,21 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
         }
         Log.d("lat = ",""+latitude);
-        LatLng latLng = new LatLng(location.getLatitude() , location.getLongitude());
+        latLng = new LatLng(location.getLatitude() , location.getLongitude());
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
         markerOptions.title("Current Location");
         markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
         currentLocationMarker = mMap.addMarker(markerOptions);
+        for(int i = 0;i<arrayList.size();i++){
+            mMap.addMarker(new MarkerOptions().position(arrayList.get(i))
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.mapmarker4))
+                    .title(title.get(i)));
+            mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(arrayList.get(i)));
+        }
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,12));
-
+        mMap.setOnInfoWindowClickListener(this);
         if(client != null)
         {
             LocationServices.FusedLocationApi.removeLocationUpdates(client,this);
@@ -228,37 +237,76 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     @Override
     public void onInfoWindowClick(Marker marker) {
         String mk = marker.getTitle();
-        final String msg;
         String msg1=null;
+        //LatLng destination=null;
         switch (mk) {
-            case "RR":
-                msg = "ESSAR PETROLUM";
-                msg1 = "RATING:****";
+            case "ESSR PETROLEUM":
+                //destination = marker.getPosition();
+                msg = "ESSAR PETROLEUM";
+                msg1 = "Distance:600m";
                 break;
-            case "HP":
-                msg = "HINDUSTAN PETROLUM";
-                msg1 = "RATING:***";
+            case "HINDUSTHAN PETROLEUM":
+                //destination=marker.getPosition();
+                msg = "HINDUSTHAN PETROLEUM";
+                msg1 = "Distance:1km";
+
                 break;
-            case "IN":
-                msg = "INDIAN PETROLUM";
-                msg1 = "RATING:*****";
+            case "INDIAN OIL":
+                //destination=marker.getPosition();
+                msg = "INDIAN OIL";
+                msg1 = "Distance:2km";
                 break;
-            case "BH":
-                msg = "BHARAT PETROLUM";
-                msg1 = "RATING:****";
+            case "BHARAT PETROLEUM":
+                //destination=marker.getPosition();
+                msg = "BHARAT PETROLEUM";
+                msg1 = "Distance:3km";
                 break;
             default:
                 msg = "UNAVAILABLE";
                 break;
         }
-        AlertDialog.Builder builder = new AlertDialog.Builder(MapActivity.this);
+        final Dialog dialog = new Dialog(MapActivity.this);
+        dialog.setContentView(R.layout.coustombox);
+        dialog.setTitle("Details");
+        TextView txt=(TextView)dialog.findViewById(R.id.textView);
+        txt.setText(msg);
+        TextView txt1=(TextView)dialog.findViewById(R.id.textView2);
+        txt1.setText(msg1);
+        TextView txt2=(TextView)dialog.findViewById(R.id.textView3);
+        txt2.setText("Cost:83.63/lts");
+        Button btn=(Button)dialog.findViewById(R.id.cancel);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+            }
+        });
+        Button btn1 = (Button)dialog.findViewById(R.id.navigate);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MapActivity.this,UpdateData.class);
+                intent.putExtra("BunkName",msg);
+                finish();
+                startActivity(intent);
+
+            }
+        });
+        /*AlertDialog.Builder builder = new AlertDialog.Builder(MapActivity.this);
         builder.setMessage(msg+"\n"+msg1);
+        final LatLng finalDestination = destination;
         builder.setPositiveButton("Navigate", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Intent intent = new Intent(MapActivity.this,UpdateData.class);
                 intent.putExtra("BunkName",msg);
                 startActivity(intent);
+               /* if(polyline!=null)
+                    polyline.remove();
+                PolylineOptions polylineOptions = new PolylineOptions()
+                        .add(latLng,finalDestination).color(R.color.colorAccent)
+                        .clickable(true);
+                polyline=mMap.addPolyline(polylineOptions);
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -267,7 +315,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
                 dialog.cancel();
             }
         });
-        AlertDialog dialog = builder.create();
+        AlertDialog dialog = builder.create();*/
         dialog.show();
 
     }
@@ -353,4 +401,5 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     public void onRoutingCancelled() {
         Findroutes(RR,HP);
     }*/
+    
 }
