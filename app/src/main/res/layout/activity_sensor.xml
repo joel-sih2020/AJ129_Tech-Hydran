@@ -13,15 +13,15 @@
         android:layout_width="134dp"
         android:layout_height="50dp"
         android:fontFamily="@font/contrail_one"
-        android:text="@string/cost"
+        android:text="Today's cost"
         android:textColor="#000000"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toTopOf="@+id/txt1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/nxt"
         app:layout_constraintEnd_toStartOf="@+id/cst"
         app:layout_constraintHorizontal_bias="0.243"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821" />
+        app:layout_constraintVertical_bias="0.854" />
 
     <TextView
         android:id="@+id/txt1"
@@ -30,8 +30,8 @@
         android:fontFamily="@font/contrail_one"
         android:text="@string/quality"
         android:textColor="#000000"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toTopOf="@+id/txt2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt0"
         app:layout_constraintEnd_toStartOf="@+id/qlty"
         app:layout_constraintHorizontal_bias="0.243"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,13 +45,13 @@
         android:fontFamily="@font/contrail_one"
         android:text="@string/quantity"
         android:textColor="#000000"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt1"
         app:layout_constraintEnd_toStartOf="@+id/qnty"
         app:layout_constraintHorizontal_bias="0.243"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.524" />
+        app:layout_constraintVertical_bias="0.813" />
 
     <Button
         android:id="@+id/nxt"
@@ -63,40 +63,40 @@
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.737" />
+        app:layout_constraintVertical_bias="0.715" />
 
     <TextView
         android:id="@+id/cst"
         android:layout_width="134dp"
         android:layout_height="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/qlty"
         android:fontFamily="@font/contrail_one"
         android:textColor="#000000"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.898"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821" />
+        app:layout_constraintVertical_bias="0.854" />
 
     <TextView
         android:id="@+id/qlty"
         android:layout_width="134dp"
         android:layout_height="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/qnty"
         android:fontFamily="@font/contrail_one"
         android:textColor="#000000"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cst"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.898"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.912" />
+        app:layout_constraintVertical_bias="0.888" />
 
     <TextView
         android:id="@+id/qnty"
@@ -104,14 +104,14 @@
         android:layout_height="50dp"
         android:fontFamily="@font/contrail_one"
         android:textColor="#000000"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/qlty"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.898"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.524" />
+        app:layout_constraintVertical_bias="0.813" />
 
     <TextView
         android:id="@+id/textView12"
@@ -122,7 +122,7 @@
         android:textColor="#000000"
         android:textSize="30dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txt0"
+        app:layout_constraintBottom_toTopOf="@+id/txt2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

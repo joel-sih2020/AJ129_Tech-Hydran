@@ -10,81 +10,90 @@
         android:id="@+id/bunkName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="bunkname"
+        android:fontFamily="@font/contrail_one"
         android:gravity="center"
+        android:hint="bunkname"
+        android:textColor="#000000"
         android:textIsSelectable="false"
         android:textSize="23dp"
         app:layout_constraintBottom_toTopOf="@+id/date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.744" />
+        app:layout_constraintVertical_bias="0.778" />
 
     <TextView
         android:id="@+id/quality"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/quality"
+        android:fontFamily="@font/contrail_one"
         android:gravity="center"
+        android:hint="@string/quality"
+        android:textColor="#000000"
         android:textSize="23dp"
         app:layout_constraintBottom_toTopOf="@+id/quantity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.863" />
+        app:layout_constraintVertical_bias="0.841" />
 
     <TextView
         android:id="@+id/quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/quantity"
+        android:fontFamily="@font/contrail_one"
         android:gravity="center"
+        android:hint="@string/quantity"
+        android:textColor="#000000"
         android:textSize="23dp"
         app:layout_constraintBottom_toTopOf="@+id/petcost"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.902" />
+        app:layout_constraintVertical_bias="0.878" />
 
     <TextView
         android:id="@+id/petcost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/cost"
+        android:fontFamily="@font/contrail_one"
         android:gravity="center"
+        android:hint="@string/cost"
+        android:textColor="#000000"
         android:textSize="23dp"
         app:layout_constraintBottom_toTopOf="@+id/cancell"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.837" />
+        app:layout_constraintVertical_bias="0.89" />
 
     <TextView
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="date"
+        android:fontFamily="@font/contrail_one"
         android:gravity="center"
+        android:hint="date"
+        android:textColor="#000000"
         android:textSize="23dp"
         app:layout_constraintBottom_toTopOf="@+id/quality"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.823" />
+        app:layout_constraintVertical_bias="0.773" />
 
     <Button
         android:id="@+id/cancell"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="139dp"
+        android:layout_height="78dp"
+        android:background="@drawable/loginbutton"
+        android:fontFamily="@font/contrail_one"
         android:text="@string/cancel"
+        android:textSize="23dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.655" />
+        app:layout_constraintVertical_bias="0.732" />
 </androidx.constraintlayout.widget.ConstraintLayout>

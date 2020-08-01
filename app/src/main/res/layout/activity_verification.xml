@@ -10,72 +10,73 @@
     tools:context=".VerificationAct">
 
 
-    <ImageView
-        android:id="@+id/imgback"
-        android:layout_width="322dp"
-        android:layout_height="356dp"
-        android:layout_marginTop="213dp"
-        android:layout_marginBottom="162dp"
-        android:background="@drawable/bckimg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="74dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgback"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.78" />
 
     <EditText
         android:id="@+id/otp"
-        android:layout_width="209dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="53dp"
+        android:layout_width="239dp"
+        android:layout_height="61dp"
         android:background="@drawable/rectangle"
         android:gravity="center"
         android:hint="OTP"
-        app:layout_constraintEnd_toStartOf="@+id/imgback"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imgback"
-        app:layout_constraintTop_toTopOf="@+id/imgback" />
+        app:layout_constraintBottom_toTopOf="@+id/verify"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.878" />
 
     <Button
         android:id="@+id/verify"
-        android:layout_width="146dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/button"
-        android:backgroundTint="#FFFFFF"
-        android:text="verify"
-        app:layout_constraintEnd_toStartOf="@+id/imgback"
-        app:layout_constraintStart_toEndOf="@+id/imgback"
-        app:layout_constraintTop_toBottomOf="@+id/otp" />
+        android:layout_width="144dp"
+        android:layout_height="84dp"
+        android:background="@drawable/loginbutton"
+        android:fontFamily="@font/contrail_one"
+        android:text="@string/verify"
+        android:textSize="23dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtOpt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961" />
 
     <TextView
         android:id="@+id/txtOpt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginBottom="61dp"
+        android:fontFamily="@font/contrail_one"
         android:text="Resend OTP"
         android:textColor="#000000"
         android:textSize="23dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imgback"
-        app:layout_constraintEnd_toStartOf="@+id/imgback"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toEndOf="@+id/imgback"
-        app:layout_constraintTop_toBottomOf="@+id/verify" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.879" />
 
-
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/contrail_one"
+        android:text="VERIFICATION"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/otp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
