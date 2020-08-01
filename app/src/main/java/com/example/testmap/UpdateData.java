@@ -22,11 +22,8 @@ public class UpdateData extends AppCompatActivity {
     TextView updt,txt0,txt1,txt2,txt3,qlty1,qnty1,cst1,pet;
     Button update;
     FirebaseDatabase rootnode;
-    DatabaseReference referenceNode;
+    DatabaseReference referenceNode,referenceNode1;
 
-
-
-    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,12 +48,14 @@ public class UpdateData extends AppCompatActivity {
         Random number = new Random();
         float l = number.nextFloat();
         int num = number.nextInt(50);
-        final float qltyy = 100-l*num;
+        final float qltyy = (100-l*num);
         final int qntyy = number.nextInt(10);
         final float cost = (float) (qntyy*86.3);
-        qlty1.setText(String.valueOf(qltyy));
+        String qltyyy=String.format("%.2f",qltyy);
+        qlty1.setText(qltyyy);
         qnty1.setText(String.valueOf(qntyy));
         cst1.setText(String.valueOf(cost));
+
         Intent intent = getIntent();
         final String bunkName = intent.getStringExtra("BunkName");
         pet.setText(bunkName);
@@ -66,6 +65,7 @@ public class UpdateData extends AppCompatActivity {
             public void onClick(View v) {
                 rootnode = FirebaseDatabase.getInstance();
                 referenceNode = rootnode.getReference("updated Data");
+                referenceNode1=rootnode.getReference("Data").child("current status");
                 SimpleDateFormat sp = new SimpleDateFormat("dd/MM/YYYY");
                 Date dates = new Date();
                 String date=sp.format(dates);
@@ -74,6 +74,8 @@ public class UpdateData extends AppCompatActivity {
                 String costt=String.valueOf(cost);
                 Datas datas = new Datas(bunkName,date,quality,quantity,costt);
                 referenceNode.child(bunkName).setValue(datas);
+                referenceNode1.child("Quality").setValue(quality);
+                referenceNode1.child("Quantity").setValue(quantity);
                 Intent historyy=new Intent(UpdateData.this,DashBoard.class);
                 historyy.putExtra("bunk_name",bunkName);
                 startActivity(historyy);
@@ -91,5 +93,7 @@ public class UpdateData extends AppCompatActivity {
         });
 
     }
+
+
 
 }

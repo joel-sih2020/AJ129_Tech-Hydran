@@ -2,24 +2,19 @@ package com.example.testmap;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,9 +31,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.PolygonOptions;
 import com.google.android.gms.maps.model.Polyline;
-import com.google.android.gms.maps.model.PolylineOptions;
 
 import java.util.ArrayList;
 
@@ -266,7 +259,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
                 break;
         }
         final Dialog dialog = new Dialog(MapActivity.this);
-        dialog.setContentView(R.layout.coustombox);
+        dialog.setContentView(R.layout.custombox);
         dialog.setTitle("Details");
         TextView txt=(TextView)dialog.findViewById(R.id.textView);
         txt.setText(msg);
@@ -274,6 +267,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         txt1.setText(msg1);
         TextView txt2=(TextView)dialog.findViewById(R.id.textView3);
         txt2.setText("Cost:83.63/lts");
+        dialog.show();
         Button btn=(Button)dialog.findViewById(R.id.cancel);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -289,9 +283,9 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
                 intent.putExtra("BunkName",msg);
                 finish();
                 startActivity(intent);
-
             }
         });
+
         /*AlertDialog.Builder builder = new AlertDialog.Builder(MapActivity.this);
         builder.setMessage(msg+"\n"+msg1);
         final LatLng finalDestination = destination;
@@ -316,7 +310,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
             }
         });
         AlertDialog dialog = builder.create();*/
-        dialog.show();
+
 
     }
 

@@ -8,23 +8,11 @@
     tools:context=".SensorAct">
 
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/current_status"
-        android:backgroundTint="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/nxt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.091" />
-
     <TextView
         android:id="@+id/txt0"
         android:layout_width="134dp"
         android:layout_height="50dp"
+        android:fontFamily="@font/contrail_one"
         android:text="@string/cost"
         android:textColor="#000000"
         android:textSize="32sp"
@@ -39,6 +27,7 @@
         android:id="@+id/txt1"
         android:layout_width="134dp"
         android:layout_height="50dp"
+        android:fontFamily="@font/contrail_one"
         android:text="@string/quality"
         android:textColor="#000000"
         android:textSize="32sp"
@@ -53,6 +42,7 @@
         android:id="@+id/txt2"
         android:layout_width="134dp"
         android:layout_height="50dp"
+        android:fontFamily="@font/contrail_one"
         android:text="@string/quantity"
         android:textColor="#000000"
         android:textSize="32sp"
@@ -65,10 +55,10 @@
 
     <Button
         android:id="@+id/nxt"
-        android:layout_width="145dp"
-        android:layout_height="60dp"
-        android:background="@drawable/button"
-        android:backgroundTint="#FFFFFF"
+        android:layout_width="144dp"
+        android:layout_height="84dp"
+        android:background="@drawable/loginbutton"
+        android:fontFamily="@font/contrail_one"
         android:text="@string/next"
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -83,6 +73,10 @@
         android:layout_width="134dp"
         android:layout_height="50dp"
         app:layout_constraintBottom_toTopOf="@+id/qlty"
+        android:fontFamily="@font/contrail_one"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.898"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,6 +88,10 @@
         android:layout_width="134dp"
         android:layout_height="50dp"
         app:layout_constraintBottom_toTopOf="@+id/qnty"
+        android:fontFamily="@font/contrail_one"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.898"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,11 +102,30 @@
         android:id="@+id/qnty"
         android:layout_width="134dp"
         android:layout_height="50dp"
+        android:fontFamily="@font/contrail_one"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.898"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.524" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/contrail_one"
+        android:text="Current Status"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txt0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

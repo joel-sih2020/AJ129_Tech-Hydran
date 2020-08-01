@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
+import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -78,15 +79,16 @@ public class SensorAct extends AppCompatActivity {
     }
     public void getData(){
 
-        reference= database.getInstance().getReference().child("Data").child("1");
+        reference= database.getInstance().getReference().child("Data").child("current status");
         reference.addValueEventListener(new ValueEventListener() {
-
+            @SuppressLint({"DefaultLocale", "SetTextI18n"})
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String Quantity = Objects.requireNonNull(dataSnapshot.child("Quantity").getValue()).toString();
+                String Quantity = dataSnapshot.child("Quantity").getValue().toString();
                 String Quality = dataSnapshot.child("Quality").getValue().toString();
+                Float qltyy = Float.parseFloat(Quality);
                 qnty.setText(Quantity+"ltrs");
-                qlty.setText(Quality);
+                qlty.setText(String.format("%.2f",qltyy));
                 cst.setText("100");
 
             }
@@ -101,7 +103,6 @@ public class SensorAct extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-
         createNotification();
     }
 
@@ -151,4 +152,8 @@ public class SensorAct extends AppCompatActivity {
         notificationManagerCompat.notify(1, builder.build());
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }
