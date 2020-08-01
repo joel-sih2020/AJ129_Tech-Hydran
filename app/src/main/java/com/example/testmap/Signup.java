@@ -11,6 +11,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
@@ -22,7 +23,7 @@ public class Signup extends AppCompatActivity {
 
 EditText name,phnumber,txtpassword,txtPassword1;
 Button signUp,reset;
-ImageView txtcreate;
+TextView txtcreate;
 FirebaseDatabase rootNode;
 DatabaseReference reference;
 

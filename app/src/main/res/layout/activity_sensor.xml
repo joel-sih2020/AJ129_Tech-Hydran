@@ -59,7 +59,7 @@
         android:layout_height="84dp"
         android:background="@drawable/loginbutton"
         android:fontFamily="@font/contrail_one"
-        android:text="@string/next"
+        android:text="Find Bunk"
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
