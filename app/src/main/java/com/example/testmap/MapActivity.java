@@ -236,12 +236,12 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
             case "ESSR PETROLEUM":
                 //destination = marker.getPosition();
                 msg = "ESSAR PETROLEUM";
-                msg1 = "Distance:600m";
+                msg1 = "Distance:100m";
                 break;
             case "HINDUSTHAN PETROLEUM":
                 //destination=marker.getPosition();
                 msg = "HINDUSTHAN PETROLEUM";
-                msg1 = "Distance:1km";
+                msg1 = "Distance:1.3km";
 
                 break;
             case "INDIAN OIL":
@@ -252,7 +252,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
             case "BHARAT PETROLEUM":
                 //destination=marker.getPosition();
                 msg = "BHARAT PETROLEUM";
-                msg1 = "Distance:3km";
+                msg1 = "Distance:3.6km";
                 break;
             default:
                 msg = "UNAVAILABLE";
