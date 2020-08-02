@@ -8,124 +8,225 @@
     tools:context=".SensorAct">
 
 
-    <TextView
-        android:id="@+id/txt0"
-        android:layout_width="134dp"
-        android:layout_height="50dp"
-        android:fontFamily="@font/contrail_one"
-        android:text="Today's cost"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/nxt"
-        app:layout_constraintEnd_toStartOf="@+id/cst"
-        app:layout_constraintHorizontal_bias="0.243"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.854" />
-
-    <TextView
-        android:id="@+id/txt1"
-        android:layout_width="134dp"
-        android:layout_height="50dp"
-        android:fontFamily="@font/contrail_one"
-        android:text="@string/quality"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/txt0"
-        app:layout_constraintEnd_toStartOf="@+id/qlty"
-        app:layout_constraintHorizontal_bias="0.243"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.912" />
-
-    <TextView
-        android:id="@+id/txt2"
-        android:layout_width="134dp"
-        android:layout_height="50dp"
-        android:fontFamily="@font/contrail_one"
-        android:text="@string/quantity"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/txt1"
-        app:layout_constraintEnd_toStartOf="@+id/qnty"
-        app:layout_constraintHorizontal_bias="0.243"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.813" />
-
-    <Button
-        android:id="@+id/nxt"
-        android:layout_width="144dp"
-        android:layout_height="84dp"
-        android:background="@drawable/loginbutton"
-        android:fontFamily="@font/contrail_one"
-        android:text="Find Bunk"
-        android:textSize="23sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.715" />
-
-    <TextView
-        android:id="@+id/cst"
-        android:layout_width="134dp"
-        android:layout_height="50dp"
-        android:fontFamily="@font/contrail_one"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/nxt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.898"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.854" />
-
-    <TextView
-        android:id="@+id/qlty"
-        android:layout_width="134dp"
-        android:layout_height="50dp"
-        android:fontFamily="@font/contrail_one"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/cst"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.898"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888" />
-
-    <TextView
-        android:id="@+id/qnty"
-        android:layout_width="134dp"
-        android:layout_height="50dp"
-        android:fontFamily="@font/contrail_one"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/qlty"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.898"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.813" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/contrail_one"
-        android:text="Current Status"
-        android:textColor="#000000"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txt2"
+    <ImageView
+        android:id="@+id/circle"
+        android:layout_width="312dp"
+        android:layout_height="255dp"
+        android:background="@drawable/circle"
+        app:layout_constraintBottom_toTopOf="@+id/img00"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.612" />
+
+
+    <TextView
+        android:id="@+id/qlt00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUALITY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/circle"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toEndOf="@+id/circle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.164" />
+
+    <TextView
+        android:id="@+id/quality"
+        android:layout_width="134dp"
+        android:layout_height="50dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/contrail_one"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="@+id/circle"
+        app:layout_constraintEnd_toStartOf="@+id/circle"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toEndOf="@+id/circle"
+        app:layout_constraintTop_toTopOf="@+id/circle"
+        app:layout_constraintVertical_bias="0.546" />
+
+    <TextView
+        android:id="@+id/pertentage"
+        android:layout_width="25dp"
+        android:layout_height="29dp"
+        android:text="%"
+        app:layout_constraintBottom_toBottomOf="@+id/circle"
+        app:layout_constraintEnd_toEndOf="@+id/circle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/quality"
+        app:layout_constraintTop_toTopOf="@+id/circle"
+        app:layout_constraintVertical_bias="0.584" />
+
+    <ImageView
+        android:id="@+id/img00"
+        android:layout_width="353dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="216dp"
+        android:background="@drawable/rectangle5"
+        app:layout_constraintBottom_toBottomOf="@+id/img11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.431"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qlt00"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/qnt00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUANTITY"
+        app:layout_constraintBottom_toTopOf="@+id/quantity"
+        app:layout_constraintEnd_toEndOf="@+id/quantity"
+        app:layout_constraintStart_toStartOf="@+id/quantity"
+        app:layout_constraintTop_toTopOf="@+id/img00" />
+
+    <TextView
+        android:id="@+id/cst00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COST"
+        app:layout_constraintBottom_toTopOf="@+id/petcost"
+        app:layout_constraintEnd_toEndOf="@+id/petcost"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toStartOf="@+id/petcost"
+        app:layout_constraintTop_toTopOf="@+id/img00"
+        app:layout_constraintVertical_bias="0.481" />
+
+    <TextView
+        android:id="@+id/petcost"
+        android:layout_width="134dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/contrail_one"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/img11"
+        app:layout_constraintEnd_toEndOf="@+id/img00"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="@+id/img00"
+        app:layout_constraintTop_toTopOf="@+id/img00"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <ImageView
+        android:id="@+id/img11"
+        android:layout_width="375dp"
+        android:layout_height="121dp"
+        android:background="@drawable/rectangle6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qlt00"
+        app:layout_constraintVertical_bias="0.681" />
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/img11"
+        app:layout_constraintEnd_toEndOf="@+id/img11"
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toStartOf="@+id/img11"
+        app:layout_constraintTop_toTopOf="@+id/img11"
+        app:layout_constraintVertical_bias="0.845" />
+
+    <TextView
+        android:id="@+id/density"
+        android:layout_width="113dp"
+        android:layout_height="48dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/img11"
+        app:layout_constraintEnd_toStartOf="@+id/temperature"
+        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintStart_toStartOf="@+id/img11"
+        app:layout_constraintTop_toTopOf="@+id/img11"
+        app:layout_constraintVertical_bias="0.821" />
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="134dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/contrail_one"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/img11"
+        app:layout_constraintEnd_toStartOf="@+id/petcost"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="@+id/img00"
+        app:layout_constraintTop_toTopOf="@+id/img00"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <TextView
+        android:id="@+id/den"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="DENSITY"
+        app:layout_constraintBottom_toTopOf="@+id/density"
+        app:layout_constraintEnd_toEndOf="@+id/density"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="@+id/density"
+        app:layout_constraintTop_toTopOf="@+id/img11"
+        app:layout_constraintVertical_bias="0.619" />
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TEMPERATURE"
+        app:layout_constraintBottom_toTopOf="@+id/temperature"
+        app:layout_constraintEnd_toEndOf="@+id/temperature"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/temperature"
+        app:layout_constraintTop_toTopOf="@+id/img11"
+        app:layout_constraintVertical_bias="0.804" />
+
+    <ImageView
+        android:id="@+id/img22"
+        android:layout_width="9dp"
+        android:layout_height="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/density"
+        app:layout_constraintEnd_toStartOf="@+id/den"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/density"
+        app:layout_constraintTop_toTopOf="@+id/img11"
+        app:layout_constraintVertical_bias="0.615"
+        app:srcCompat="@drawable/ellipse4" />
+
+    <ImageView
+        android:id="@+id/img33"
+        android:layout_width="9dp"
+        android:layout_height="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/temperature"
+        app:layout_constraintEnd_toStartOf="@+id/temp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/temperature"
+        app:layout_constraintTop_toTopOf="@+id/img11"
+        app:layout_constraintVertical_bias="0.615"
+        app:srcCompat="@drawable/ellipse5" />
+
+    <Button
+        android:id="@+id/cancell"
+        android:layout_width="345dp"
+        android:layout_height="94dp"
+        android:background="@drawable/rectangle1"
+        android:gravity="center"
+        android:text="Find Bunk"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img11" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

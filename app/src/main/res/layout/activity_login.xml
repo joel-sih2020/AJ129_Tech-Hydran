@@ -42,7 +42,7 @@
         android:id="@+id/login"
         android:layout_width="91dp"
         android:layout_height="53dp"
-        android:background="@drawable/loginbutton"
+        android:background="@drawable/rectangle1"
         android:clickable="true"
         android:focusable="true"
         android:fontFamily="@font/contrail_one"

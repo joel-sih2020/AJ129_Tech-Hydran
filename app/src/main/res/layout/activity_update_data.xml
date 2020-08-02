@@ -120,7 +120,7 @@
         android:id="@+id/save"
         android:layout_width="138dp"
         android:layout_height="68dp"
-        android:background="@drawable/loginbutton"
+        android:background="@drawable/rectangle1"
         android:fontFamily="@font/contrail_one"
         android:text="@string/update"
         app:layout_constraintBottom_toBottomOf="parent"

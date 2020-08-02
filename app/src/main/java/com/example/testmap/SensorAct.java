@@ -14,8 +14,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,11 +28,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.Objects;
-
 public class SensorAct extends AppCompatActivity {
-    TextView txt0,txt1,txt2,qlty,qnty,cst;
+    TextView qlt00,quality,pertentage,qnt00,cst00,petcost,temperature,density,quantity,den,temp;
     Button btn;
+    ImageView circle,img0,img1,img2,img3;
     FirebaseDatabase database;
     DatabaseReference reference;
     SharedPreferences preferences;
@@ -49,15 +50,26 @@ public class SensorAct extends AppCompatActivity {
         }
 
         preferences=getSharedPreferences(LOGIN,MODE_PRIVATE);
+        Log.d("wrk","Wrk1");
+        circle=findViewById(R.id.circle);
+        img0=findViewById(R.id.img00);
+        img1=findViewById(R.id.img11);
+        img2=findViewById(R.id.img22);
+        img3=findViewById(R.id.img33);
 
-        txt0=findViewById(R.id.txt0);
-        txt1=findViewById(R.id.txt1);
-        txt2=findViewById(R.id.txt2);
-        qlty=findViewById(R.id.qlty);
-        qnty=findViewById(R.id.qnty);
-        cst=findViewById(R.id.cst);
-
-        btn=findViewById(R.id.nxt);
+        qlt00=findViewById(R.id.qlt00);
+        quality=findViewById(R.id.quality);
+        pertentage=findViewById(R.id.pertentage);
+        qnt00=findViewById(R.id.qnt00);
+        cst00=findViewById(R.id.cst00);
+        petcost=findViewById(R.id.petcost);
+        temperature=findViewById(R.id.temperature);
+        density=findViewById(R.id.density);
+        quantity=findViewById(R.id.quantity);
+        den=findViewById(R.id.den);
+        temp=findViewById(R.id.temp);
+        Log.d("wrk","Wrk2");
+        btn=findViewById(R.id.cancell);
         getData();
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,18 +91,27 @@ public class SensorAct extends AppCompatActivity {
     }
     public void getData(){
 
-        reference= database.getInstance().getReference().child("Data").child("current status");
+        reference= database.getInstance().getReference("Data").child("current status");
+        Log.d("Wrk","wrk00");
         reference.addValueEventListener(new ValueEventListener() {
-            @SuppressLint({"DefaultLocale", "SetTextI18n"})
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Log.d("wrk","Wrk3");
                 String Quantity = dataSnapshot.child("Quantity").getValue().toString();
                 String Quality = dataSnapshot.child("Quality").getValue().toString();
+                String Density= dataSnapshot.child("Density").getValue().toString();
+                String Temperature=dataSnapshot.child("Temperature").getValue().toString();
+                String Cost=dataSnapshot.child("Cost").getValue().toString();
                 Float qltyy = Float.parseFloat(Quality);
-                qnty.setText(Quantity+"ltrs");
-                qlty.setText(String.format("%.2f",qltyy));
-                cst.setText("100");
-
+                Log.d("wrk","Wrk4");
+                quality.setText(String.format("%.2f",qltyy));
+                quantity.setText(Quantity);
+                density.setText(Density);
+                Log.d("wrk","Wrk03");
+                temperature.setText(Temperature);
+                Log.d("wrk","Wrk003");
+                petcost.setText(Cost);
+                Log.d("wrk","Wrk5");
             }
 
             @Override

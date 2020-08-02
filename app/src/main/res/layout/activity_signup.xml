@@ -38,7 +38,7 @@
         android:id="@+id/signUp"
         android:layout_width="138dp"
         android:layout_height="68dp"
-        android:background="@drawable/loginbutton"
+        android:background="@drawable/rectangle1"
         android:backgroundTintMode="src_in"
         android:fontFamily="@font/contrail_one"
         android:text="create"
