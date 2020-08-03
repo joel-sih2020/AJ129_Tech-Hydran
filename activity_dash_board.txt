@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundTint="#000000"
+    tools:context=".DashBoard">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="210dp"
+        android:layout_height="51dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="Home"
+        android:textColor="#f26159"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/currentstatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="240dp"
+        android:layout_height="76dp"
+        android:background="@drawable/textbackground"
+        android:fontFamily="sans-serif"
+        android:text="@string/logout"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="451dp" />
+
+    <Button
+        android:id="@+id/map"
+        android:layout_width="240dp"
+        android:layout_height="76dp"
+        android:background="@drawable/textbackground"
+        android:fontFamily="sans-serif"
+        android:text="Find a Bunk"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="279dp" />
+
+    <Button
+        android:id="@+id/currentstatus"
+        android:layout_width="240dp"
+        android:layout_height="76dp"
+        android:background="@drawable/textbackground"
+        android:fontFamily="sans-serif"
+        android:text="    CURRENT STATUS"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <Button
+        android:id="@+id/history"
+        android:layout_width="240dp"
+        android:layout_height="76dp"
+        android:background="@drawable/textbackground"
+        android:fontFamily="sans-serif"
+        android:text="        Recent Activities"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="365dp" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="44dp"
+        android:layout_height="37dp"
+        app:srcCompat="@drawable/currentstatusicon"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="210dp" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="44dp"
+        android:layout_height="43dp"
+        app:srcCompat="@drawable/findabunkicon"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="294dp" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="38dp"
+        android:layout_height="32dp"
+        app:srcCompat="@drawable/recentactivityicon"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="389dp" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="37dp"
+        android:layout_height="44dp"
+        app:srcCompat="@drawable/logouticon"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="466dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
