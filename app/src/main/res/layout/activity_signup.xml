@@ -7,24 +7,25 @@
     android:background="@color/background"
     tools:context=".Signup">
 
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="239dp"
-        android:layout_height="61dp"
-        android:background="@drawable/rectangle"
-        android:gravity="center"
-        android:hint="Name"
-        app:layout_constraintBottom_toTopOf="@+id/phnumber"
+    <Button
+        android:id="@+id/signUp"
+        android:layout_width="225dp"
+        android:layout_height="68dp"
+        android:background="@drawable/rectangle1"
+        android:backgroundTintMode="src_in"
+        android:text="Next"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.827" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/phnumber"
-        android:layout_width="239dp"
-        android:layout_height="61dp"
-        android:background="@drawable/rectangle"
+        android:layout_width="225dp"
+        android:layout_height="46dp"
+        android:background="@drawable/textbackground"
         android:gravity="center"
         android:hint="Phone number"
         android:inputType="phone"
@@ -32,37 +33,44 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.901" />
+        app:layout_constraintVertical_bias="0.801" />
 
-    <Button
-        android:id="@+id/signUp"
-        android:layout_width="138dp"
-        android:layout_height="68dp"
-        android:background="@drawable/rectangle1"
-        android:backgroundTintMode="src_in"
-        android:fontFamily="@font/contrail_one"
-        android:text="create"
-        android:textSize="23sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="225dp"
+        android:layout_height="46dp"
+        android:background="@drawable/textbackground"
+        android:gravity="center"
+        android:hint="Name"
+        app:layout_constraintBottom_toTopOf="@+id/phnumber"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.841" />
+
+    <ImageView
+        android:id="@+id/txtcreate"
+        android:layout_width="225dp"
+        android:layout_height="6dp"
+        android:background="@drawable/topline"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.506" />
 
     <TextView
-        android:id="@+id/txtcreate"
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/contrail_one"
-        android:text="Create New Account"
-        android:textColor="#000000"
-        android:textSize="30dp"
-        android:textStyle="bold"
+        android:text="Sign Up"
+        android:textColor="#f25961"
+        android:textSize="40dp"
         app:layout_constraintBottom_toTopOf="@+id/name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.829"
+        tools:textStyle="bold" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

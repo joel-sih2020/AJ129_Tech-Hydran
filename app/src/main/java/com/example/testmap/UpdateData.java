@@ -1,6 +1,5 @@
 package com.example.testmap;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -52,7 +51,7 @@ public class UpdateData extends AppCompatActivity {
         final int qntyy = number.nextInt(10);
         final float cost = (float) (qntyy*86.3);
         String qltyyy=String.format("%.2f",qltyy);
-        qlty1.setText(qltyyy);
+        qlty1.setText(qltyyy+"%");
         qnty1.setText(String.valueOf(qntyy));
         cst1.setText(String.valueOf(cost));
 

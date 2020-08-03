@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -35,6 +34,7 @@ public class SensorAct extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference reference;
     SharedPreferences preferences;
+    float sensorTemp=30;
     private static final String LOGIN="userIN";
     private static final String KEY="name";
     private NotificationManager notificationManager;
@@ -98,20 +98,20 @@ public class SensorAct extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Log.d("wrk","Wrk3");
                 String Quantity = dataSnapshot.child("Quantity").getValue().toString();
-                String Quality = dataSnapshot.child("Quality").getValue().toString();
+                //String Quality = dataSnapshot.child("Quality").getValue().toString();
                 String Density= dataSnapshot.child("Density").getValue().toString();
                 String Temperature=dataSnapshot.child("Temperature").getValue().toString();
                 String Cost=dataSnapshot.child("Cost").getValue().toString();
-                Float qltyy = Float.parseFloat(Quality);
-                Log.d("wrk","Wrk4");
-                quality.setText(String.format("%.2f",qltyy));
+                float sensordensity = Float.parseFloat(Density);
+                float senseTemp=Float.parseFloat(Temperature);
+                String tempp=String.valueOf(sensorTemp);
+                String per=calculate(senseTemp,sensorTemp,sensordensity);
+                quality.setText(per);
                 quantity.setText(Quantity);
-                density.setText(Density);
-                Log.d("wrk","Wrk03");
-                temperature.setText(Temperature);
-                Log.d("wrk","Wrk003");
                 petcost.setText(Cost);
-                Log.d("wrk","Wrk5");
+                density.setText(Density);
+                temperature.setText(tempp);
+
             }
 
             @Override
@@ -172,7 +172,21 @@ public class SensorAct extends AppCompatActivity {
         NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(SensorAct.this);
         notificationManagerCompat.notify(1, builder.build());
     }
+    public String calculate(float temp0, float temp, float den){
+        float temp1=0,temp2=0,ipDensity=0,k= (float) 0.01;
+        String percent;
+        float result=ipDensity/(((temp1-temp2)*k)+1);
+        if(result>718 && result<725){
+            return percent="100";
+        }
+        else if (result>726 && result<740){
+            return percent="90";
+        }
+        else{
+            return percent="<80";
+        }
 
+    }
     @Override
     protected void onDestroy() {
         super.onDestroy();

@@ -26,7 +26,7 @@
         android:id="@+id/otp"
         android:layout_width="239dp"
         android:layout_height="61dp"
-        android:background="@drawable/rectangle"
+        android:background="@drawable/textbackground"
         android:gravity="center"
         android:hint="OTP"
         app:layout_constraintBottom_toTopOf="@+id/verify"
@@ -39,7 +39,7 @@
         android:id="@+id/verify"
         android:layout_width="144dp"
         android:layout_height="84dp"
-        android:background="@drawable/loginbutton"
+        android:background="@drawable/rectangle1"
         android:fontFamily="@font/contrail_one"
         android:text="@string/verify"
         android:textSize="23dp"
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/contrail_one"
         android:text="Resend OTP"
-        android:textColor="#000000"
+        android:textColor="#f25961"
         android:textSize="23dp"
         app:layout_constraintBottom_toTopOf="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +71,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/contrail_one"
         android:text="VERIFICATION"
-        android:textColor="#000000"
+        android:textColor="#f25961"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/otp"
@@ -79,4 +79,5 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

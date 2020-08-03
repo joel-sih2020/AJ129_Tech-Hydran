@@ -28,10 +28,10 @@
         android:text="QUALITY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/circle"
-        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toEndOf="@+id/circle"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.164" />
+        app:layout_constraintVertical_bias="0.16" />
 
     <TextView
         android:id="@+id/quality"
@@ -66,14 +66,13 @@
         android:id="@+id/img00"
         android:layout_width="353dp"
         android:layout_height="113dp"
-        android:layout_marginTop="216dp"
         android:background="@drawable/rectangle5"
         app:layout_constraintBottom_toBottomOf="@+id/img11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/qlt00"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.531" />
 
     <TextView
         android:id="@+id/qnt00"
@@ -89,7 +88,7 @@
         android:id="@+id/cst00"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="COST"
+        android:text="TODAY's COST"
         app:layout_constraintBottom_toTopOf="@+id/petcost"
         app:layout_constraintEnd_toEndOf="@+id/petcost"
         app:layout_constraintHorizontal_bias="0.474"
