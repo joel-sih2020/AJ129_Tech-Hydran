@@ -11,10 +11,10 @@
         android:id="@+id/title"
         android:layout_width="210dp"
         android:layout_height="51dp"
-        android:fontFamily="@font/contrail_one"
+        android:fontFamily="sans-serif"
         android:gravity="center"
         android:text="Home"
-        android:textColor="#000000"
+        android:textColor="#f26159"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/currentstatus"
@@ -24,68 +24,113 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/logout"
-        android:layout_width="357dp"
-        android:layout_height="97dp"
-        android:background="@drawable/rectangle1"
-        android:fontFamily="@font/contrail_one"
-        android:text="@string/logout"
+        android:id="@+id/currentstatus"
+        android:layout_width="240dp"
+        android:layout_height="76dp"
+        android:background="@drawable/textbackground"
+        android:fontFamily="sans-serif"
+        android:text="    CURRENT STATUS"
         android:textColor="#000000"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/map"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.955" />
+        app:layout_constraintVertical_bias="0.939" />
+
+    <ImageView
+        android:id="@+id/txt080"
+        android:layout_width="44dp"
+        android:layout_height="37dp"
+        app:layout_constraintBottom_toBottomOf="@+id/currentstatus"
+        app:layout_constraintEnd_toEndOf="@+id/currentstatus"
+        app:layout_constraintHorizontal_bias="0.005"
+        app:layout_constraintStart_toStartOf="@+id/currentstatus"
+        app:layout_constraintTop_toTopOf="@+id/currentstatus"
+        app:layout_constraintVertical_bias="0.487"
+        app:srcCompat="@drawable/currentstatusicon" />
 
     <Button
         android:id="@+id/map"
-        android:layout_width="357dp"
-        android:layout_height="97dp"
-        android:background="@drawable/rectangle1"
-        android:fontFamily="@font/contrail_one"
+        android:layout_width="240dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/textbackground"
+        android:fontFamily="sans-serif"
         android:text="Find a Bunk"
         android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/history"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.875" />
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/currentstatus"
-        android:layout_width="357dp"
-        android:layout_height="97dp"
-        android:background="@drawable/rectangle1"
-        android:fontFamily="@font/contrail_one"
-        android:text="@string/current_status"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/map"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.756" />
+    <ImageView
+        android:id="@+id/img12"
+        android:layout_width="44dp"
+        android:layout_height="43dp"
+        app:layout_constraintBottom_toBottomOf="@+id/map"
+        app:layout_constraintEnd_toEndOf="@+id/map"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/map"
+        app:layout_constraintTop_toTopOf="@+id/map"
+        app:layout_constraintVertical_bias="0.484"
+        app:srcCompat="@drawable/findabunkicon" />
 
     <Button
         android:id="@+id/history"
-        android:layout_width="357dp"
-        android:layout_height="97dp"
-        android:background="@drawable/rectangle1"
-        android:fontFamily="@font/contrail_one"
-        android:text="Recent Activities"
+        android:layout_width="240dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/textbackground"
+        android:fontFamily="sans-serif"
+        android:text="        Recent Activities"
         android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/logout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/img13"
+        android:layout_width="38dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/history"
+        app:layout_constraintEnd_toEndOf="@+id/history"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toStartOf="@+id/history"
+        app:layout_constraintTop_toTopOf="@+id/history"
+        app:layout_constraintVertical_bias="0.477"
+        app:srcCompat="@drawable/recentactivityicon" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="240dp"
+        android:layout_height="76dp"
+        android:background="@drawable/textbackground"
+        android:fontFamily="sans-serif"
+        android:text="@string/logout"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.924" />
+        app:layout_constraintVertical_bias="0.808" />
 
+    <ImageView
+        android:id="@+id/img14"
+        android:layout_width="37dp"
+        android:layout_height="44dp"
+        app:layout_constraintBottom_toBottomOf="@+id/logout"
+        app:layout_constraintEnd_toEndOf="@+id/logout"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toStartOf="@+id/logout"
+        app:layout_constraintTop_toTopOf="@+id/logout"
+        app:layout_constraintVertical_bias="0.437"
+        app:srcCompat="@drawable/logouticon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

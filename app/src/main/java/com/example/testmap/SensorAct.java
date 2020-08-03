@@ -11,6 +11,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.hardware.SensorManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,11 +35,10 @@ public class SensorAct extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference reference;
     SharedPreferences preferences;
-    float sensorTemp=30;
+    float sensorTemp;
     private static final String LOGIN="userIN";
     private static final String KEY="name";
     private NotificationManager notificationManager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +48,6 @@ public class SensorAct extends AppCompatActivity {
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel);
         }
-
         preferences=getSharedPreferences(LOGIN,MODE_PRIVATE);
         Log.d("wrk","Wrk1");
         circle=findViewById(R.id.circle);
@@ -102,6 +101,8 @@ public class SensorAct extends AppCompatActivity {
                 String Density= dataSnapshot.child("Density").getValue().toString();
                 String Temperature=dataSnapshot.child("Temperature").getValue().toString();
                 String Cost=dataSnapshot.child("Cost").getValue().toString();
+                String phontemp=dataSnapshot.child("phoneTemp").getValue().toString();
+                sensorTemp=Float.parseFloat(phontemp);
                 float sensordensity = Float.parseFloat(Density);
                 float senseTemp=Float.parseFloat(Temperature);
                 String tempp=String.valueOf(sensorTemp);
@@ -109,8 +110,8 @@ public class SensorAct extends AppCompatActivity {
                 quality.setText(per);
                 quantity.setText(Quantity);
                 petcost.setText(Cost);
-                density.setText(Density);
-                temperature.setText(tempp);
+                density.setText(Density+"kg/m3");
+                temperature.setText(tempp+"°C");
 
             }
 
@@ -183,7 +184,7 @@ public class SensorAct extends AppCompatActivity {
             return percent="90";
         }
         else{
-            return percent="<80";
+            return percent="80";
         }
 
     }

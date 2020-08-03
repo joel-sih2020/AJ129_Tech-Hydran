@@ -66,8 +66,8 @@ ImageView circle1,img0,img1,img2,img3;
                 quantity.setText(quantity1);
                 petcost.setText(petcost1);
                 Log.d("wrking","1");
-                density1.setText("730");
-                temperature1.setText("28");
+                density1.setText("730kg/m3");
+                temperature1.setText("28°C");
                 Log.d("wrking","2");
 
             }

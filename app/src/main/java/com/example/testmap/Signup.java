@@ -23,7 +23,8 @@ public class Signup extends AppCompatActivity {
 
 EditText name,phnumber,txtpassword,txtPassword1;
 Button signUp,reset;
-TextView txtcreate;
+ImageView txtcreate;
+TextView txtTT;
 FirebaseDatabase rootNode;
 DatabaseReference reference;
 
@@ -32,6 +33,7 @@ DatabaseReference reference;
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_signup);
+        txtTT=findViewById(R.id.txtTtt);
         txtcreate=findViewById(R.id.txtcreate);
         name=findViewById(R.id.name);
         phnumber=findViewById(R.id.phnumber);
