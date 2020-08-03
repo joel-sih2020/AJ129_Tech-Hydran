@@ -26,8 +26,8 @@
 
     <ImageView
         android:id="@+id/circle"
-        android:layout_width="304dp"
-        android:layout_height="229dp"
+        android:layout_width="288dp"
+        android:layout_height="219dp"
         android:background="@drawable/circle"
         app:layout_constraintBottom_toTopOf="@+id/img00"
         app:layout_constraintEnd_toEndOf="parent"
@@ -223,6 +223,7 @@
         android:background="@drawable/rectangle1"
         android:gravity="center"
         android:text="BACK"
+        android:textColor="#FFFF"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/circle"
-        android:layout_width="312dp"
-        android:layout_height="255dp"
+        android:layout_width="276dp"
+        android:layout_height="240dp"
         android:background="@drawable/circle"
         app:layout_constraintBottom_toTopOf="@+id/img00"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,14 +35,11 @@
 
     <TextView
         android:id="@+id/quality"
-        android:layout_width="134dp"
-        android:layout_height="50dp"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
         android:textAlignment="center"
-        android:fontFamily="@font/contrail_one"
         android:textColor="#000000"
-        android:textSize="30dp"
-        android:textStyle="bold"
-
+        android:textSize="90dp"
         app:layout_constraintBottom_toBottomOf="@+id/circle"
         app:layout_constraintEnd_toStartOf="@+id/circle"
         app:layout_constraintHorizontal_bias="0.541"
@@ -100,11 +97,10 @@
         android:id="@+id/petcost"
         android:layout_width="134dp"
         android:layout_height="50dp"
-        android:fontFamily="@font/contrail_one"
-        android:textColor="#000000"
-        android:textSize="30dp"
-        android:textStyle="bold"
+        android:fontFamily="sans-serif"
         android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="45dp"
         app:layout_constraintBottom_toTopOf="@+id/img11"
         app:layout_constraintEnd_toEndOf="@+id/img00"
         app:layout_constraintHorizontal_bias="0.888"
@@ -119,16 +115,17 @@
         android:background="@drawable/rectangle6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/qlt00"
-        app:layout_constraintVertical_bias="0.681" />
+        app:layout_constraintVertical_bias="0.743" />
 
     <TextView
         android:id="@+id/temperature"
         android:layout_width="98dp"
         android:layout_height="50dp"
+        android:fontFamily="sans-serif"
         android:textAlignment="center"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/img11"
         app:layout_constraintEnd_toEndOf="@+id/img11"
         app:layout_constraintHorizontal_bias="0.848"
@@ -140,7 +137,9 @@
         android:id="@+id/density"
         android:layout_width="113dp"
         android:layout_height="48dp"
+        android:fontFamily="sans-serif"
         android:textAlignment="center"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/img11"
         app:layout_constraintEnd_toStartOf="@+id/temperature"
         app:layout_constraintHorizontal_bias="0.186"
@@ -152,11 +151,10 @@
         android:id="@+id/quantity"
         android:layout_width="134dp"
         android:layout_height="50dp"
-        android:fontFamily="@font/contrail_one"
-        android:textColor="#000000"
-        android:textSize="30dp"
-        android:textStyle="bold"
+        android:fontFamily="sans-serif"
         android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="45dp"
         app:layout_constraintBottom_toTopOf="@+id/img11"
         app:layout_constraintEnd_toStartOf="@+id/petcost"
         app:layout_constraintHorizontal_bias="0.481"
@@ -198,7 +196,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/density"
         app:layout_constraintTop_toTopOf="@+id/img11"
-        app:layout_constraintVertical_bias="0.615"
+        app:layout_constraintVertical_bias="0.754"
         app:srcCompat="@drawable/ellipse4" />
 
     <ImageView
@@ -210,22 +208,24 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/temperature"
         app:layout_constraintTop_toTopOf="@+id/img11"
-        app:layout_constraintVertical_bias="0.615"
+        app:layout_constraintVertical_bias="0.754"
         app:srcCompat="@drawable/ellipse5" />
 
     <Button
         android:id="@+id/cancell"
-        android:layout_width="345dp"
-        android:layout_height="94dp"
+        android:layout_width="330dp"
+        android:layout_height="78dp"
         android:background="@drawable/rectangle1"
         android:gravity="center"
         android:text="Find Bunk"
+        android:textColor="#FFFF"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img11" />
+        app:layout_constraintTop_toBottomOf="@+id/img11"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

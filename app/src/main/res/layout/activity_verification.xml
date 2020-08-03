@@ -43,6 +43,7 @@
         android:fontFamily="@font/contrail_one"
         android:text="@string/verify"
         android:textSize="23dp"
+        android:textColor="#ffff"
         app:layout_constraintBottom_toTopOf="@+id/txtOpt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

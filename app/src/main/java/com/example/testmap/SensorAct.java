@@ -108,8 +108,8 @@ public class SensorAct extends AppCompatActivity {
                 String tempp=String.valueOf(sensorTemp);
                 String per=calculate(senseTemp,sensorTemp,sensordensity);
                 quality.setText(per);
-                quantity.setText(Quantity);
-                petcost.setText(Cost);
+                quantity.setText(Quantity+"L");
+                petcost.setText("₹"+Cost);
                 density.setText(Density+"kg/m3");
                 temperature.setText(tempp+"°C");
 
@@ -174,7 +174,7 @@ public class SensorAct extends AppCompatActivity {
         notificationManagerCompat.notify(1, builder.build());
     }
     public String calculate(float temp0, float temp, float den){
-        float temp1=0,temp2=0,ipDensity=0,k= (float) 0.01;
+        float temp1=0,temp2=0,ipDensity=0,k=(float) 0.01;
         String percent;
         float result=ipDensity/(((temp1-temp2)*k)+1);
         if(result>718 && result<725){
@@ -191,5 +191,6 @@ public class SensorAct extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        createNotification();
     }
 }

@@ -12,109 +12,119 @@
         android:layout_width="343dp"
         android:layout_height="51dp"
         android:gravity="center"
-        android:textColor="#000000"
-        android:textSize="24sp"
+        android:textColor="#f25961"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/save"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintVertical_bias="0.047" />
 
     <TextView
         android:id="@+id/txt0"
         android:layout_width="159dp"
         android:layout_height="47dp"
+        android:fontFamily="sans-serif"
         android:textColor="#000000"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/txt1"
         app:layout_constraintEnd_toStartOf="@+id/pet"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.754" />
+        app:layout_constraintTop_toBottomOf="@+id/updt"
+        app:layout_constraintVertical_bias="0.689" />
 
     <TextView
         android:id="@+id/qnty1"
         android:layout_width="159dp"
         android:layout_height="47dp"
         android:textColor="#000000"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/qlty1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.865"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.892" />
+        app:layout_constraintTop_toBottomOf="@+id/updt"
+        app:layout_constraintVertical_bias="0.859" />
 
     <TextView
         android:id="@+id/qlty1"
         android:layout_width="159dp"
         android:layout_height="47dp"
         android:textColor="#000000"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/save"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.865"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.811" />
+        app:layout_constraintTop_toBottomOf="@+id/updt"
+        app:layout_constraintVertical_bias="0.906" />
 
     <TextView
         android:id="@+id/txt1"
         android:layout_width="159dp"
         android:layout_height="47dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif"
         android:textColor="#000000"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/txt2"
         app:layout_constraintEnd_toStartOf="@+id/cst1"
-        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.837" />
+        app:layout_constraintTop_toBottomOf="@+id/updt"
+        app:layout_constraintVertical_bias="0.864" />
 
     <TextView
         android:id="@+id/txt2"
         android:layout_width="159dp"
         android:layout_height="47dp"
         android:textColor="#000000"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/txt3"
         app:layout_constraintEnd_toStartOf="@+id/qnty1"
-        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.892" />
+        app:layout_constraintTop_toBottomOf="@+id/updt"
+        app:layout_constraintVertical_bias="0.855" />
 
     <TextView
         android:id="@+id/txt3"
         android:layout_width="159dp"
         android:layout_height="47dp"
         android:textColor="#000000"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/save"
         app:layout_constraintEnd_toStartOf="@+id/qlty1"
-        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.811" />
+        app:layout_constraintTop_toBottomOf="@+id/updt"
+        app:layout_constraintVertical_bias="0.907" />
 
     <TextView
         android:id="@+id/pet"
         android:layout_width="159dp"
         android:layout_height="47dp"
+        android:fontFamily="sans-serif"
         android:textColor="#000000"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/cst1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
-        app:layout_constraintStart_toEndOf="@+id/txt0"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.754" />
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updt"
+        app:layout_constraintVertical_bias="0.689" />
 
     <TextView
         android:id="@+id/cst1"
         android:layout_width="159dp"
         android:layout_height="47dp"
         android:textColor="#000000"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/qnty1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.865"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.837" />
+        app:layout_constraintTop_toBottomOf="@+id/updt"
+        app:layout_constraintVertical_bias="0.817" />
 
     <Button
         android:id="@+id/save"
@@ -123,10 +133,11 @@
         android:background="@drawable/rectangle1"
         android:fontFamily="@font/contrail_one"
         android:text="@string/update"
+        android:textColor="#FFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.834" />
+        app:layout_constraintTop_toBottomOf="@+id/updt"
+        app:layout_constraintVertical_bias="0.814" />
 </androidx.constraintlayout.widget.ConstraintLayout>

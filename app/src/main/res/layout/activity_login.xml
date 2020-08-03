@@ -7,11 +7,22 @@
     android:backgroundTint="#FFFFFF"
     tools:context=".LoginAct">
 
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="325dp"
+        android:layout_height="6dp"
+        android:background="@drawable/topline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
     <EditText
         android:id="@+id/Uname"
-        android:layout_width="210dp"
-        android:layout_height="70dp"
-        android:background="@drawable/rectangle"
+        android:layout_width="325dp"
+        android:layout_height="46dp"
+        android:background="@drawable/textbackground"
         android:gravity="center"
         android:importantForAutofill="no"
         android:textColorHint="#003049"
@@ -24,9 +35,9 @@
 
     <EditText
         android:id="@+id/Upass"
-        android:layout_width="210dp"
-        android:layout_height="70dp"
-        android:background="@drawable/rectangle"
+        android:layout_width="325dp"
+        android:layout_height="46dp"
+        android:background="@drawable/textbackground"
         android:gravity="center"
         android:importantForAutofill="no"
         android:inputType="textPassword"
@@ -40,15 +51,15 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="91dp"
-        android:layout_height="53dp"
+        android:layout_width="225dp"
+        android:layout_height="68dp"
         android:background="@drawable/rectangle1"
         android:clickable="true"
         android:focusable="true"
-        android:fontFamily="@font/contrail_one"
+        android:fontFamily="sans-serif"
         android:shadowColor="#020202"
         android:text="@string/login"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/create"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -62,7 +73,7 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:focusable="true"
-        android:fontFamily="@font/contrail_one"
+        android:fontFamily="sans-serif"
         android:text="Sign up"
         android:textColor="#000000"
         android:textSize="15dp"
@@ -77,7 +88,7 @@
         android:id="@+id/forgotPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/contrail_one"
+        android:fontFamily="sans-serif"
         android:text="@string/forgot_password"
         android:textColor="#000000"
         android:textSize="15dp"
@@ -92,61 +103,62 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/contrail_one"
-        android:text="Welcome to PetrolQ"
-        android:textColor="#000000"
+        android:fontFamily="sans-serif"
+        android:text="Log In"
+        android:textColor="#f25961"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.692" />
+        app:layout_constraintVertical_bias="0.666" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/contrail_one"
+        android:fontFamily="sans-serif"
         android:text="Username"
-        android:textColor="#000000"
+        android:textColor="#f25961"
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/Uname"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintHorizontal_bias="0.139"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.943" />
+        app:layout_constraintVertical_bias="0.918" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/contrail_one"
+        android:fontFamily="sans-serif"
         android:text="Password"
-        android:textColor="#000000"
+        android:textColor="#f25961"
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/Upass"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.305"
+        app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.97" />
+        app:layout_constraintVertical_bias="0.96" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
-        android:fontFamily="@font/contrail_one"
+        android:fontFamily="sans-serif"
         android:text="Are you new?"
-        android:textColor="#000000"
+        android:textColor="#8c8c8c"
         android:textSize="15dp"
         app:layout_constraintBottom_toTopOf="@+id/forgotPass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.942" />
+        app:layout_constraintVertical_bias="0.941" />
 </androidx.constraintlayout.widget.ConstraintLayout>
