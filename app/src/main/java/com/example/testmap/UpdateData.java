@@ -2,6 +2,7 @@ package com.example.testmap;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -44,13 +45,13 @@ public class UpdateData extends AppCompatActivity {
         txt1.setText("COST:");
         txt0.setText("BUNK NAME:");
 
+        GenerateQuality generateQuality=new GenerateQuality();
+        final int qltyy = generateQuality.Calculate();
         Random number = new Random();
-        float l = number.nextFloat();
         int num = number.nextInt(50);
-        final float qltyy = (100-l*num);
         final int qntyy = number.nextInt(10);
         final float cost = (float) (qntyy*86.3);
-        String qltyyy=String.format("%.2f",qltyy);
+        String qltyyy=String.valueOf(qltyy);
         qlty1.setText(qltyyy+"%");
         qnty1.setText(String.valueOf(qntyy));
         cst1.setText(String.valueOf(cost));
@@ -64,17 +65,16 @@ public class UpdateData extends AppCompatActivity {
             public void onClick(View v) {
                 rootnode = FirebaseDatabase.getInstance();
                 referenceNode = rootnode.getReference("updated Data");
-                referenceNode1=rootnode.getReference("Data").child("current status");
-                SimpleDateFormat sp = new SimpleDateFormat("dd/MM/YYYY");
-                Date dates = new Date();
-                String date=sp.format(dates);
+                referenceNode1=FirebaseDatabase.getInstance().getReference("Data");
                 String quality=String.valueOf(qltyy);
                 String quantity=String.valueOf(qntyy);
                 String costt=String.valueOf(cost);
-                Datas datas = new Datas(bunkName,date,quality,quantity,costt);
+                Datas datas = new Datas(bunkName,quality,quantity,costt);
                 referenceNode.child(bunkName).setValue(datas);
-                referenceNode1.child("Quality").setValue(quality);
-                referenceNode1.child("Quantity").setValue(quantity);
+                referenceNode1.child("current status").child("Quality").setValue(quality);
+                Log.d("save","save");
+                referenceNode1.child("current status").child("Quantity").setValue(quantity);
+                referenceNode1.child("current status").child("Cost").setValue(quantity);
                 Intent historyy=new Intent(UpdateData.this,DashBoard.class);
                 historyy.putExtra("bunk_name",bunkName);
                 startActivity(historyy);

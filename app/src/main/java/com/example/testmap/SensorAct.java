@@ -33,7 +33,7 @@ public class SensorAct extends AppCompatActivity {
     Button btn;
     ImageView circle,img0,img1,img2,img3;
     FirebaseDatabase database;
-    DatabaseReference reference;
+    DatabaseReference reference,reference1;
     SharedPreferences preferences;
     float sensorTemp;
     private static final String LOGIN="userIN";
@@ -91,27 +91,20 @@ public class SensorAct extends AppCompatActivity {
     public void getData(){
 
         reference= database.getInstance().getReference("Data").child("current status");
-        Log.d("Wrk","wrk00");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Log.d("wrk","Wrk3");
                 String Quantity = dataSnapshot.child("Quantity").getValue().toString();
-                //String Quality = dataSnapshot.child("Quality").getValue().toString();
+                String Quality = dataSnapshot.child("Quality").getValue().toString();
                 String Density= dataSnapshot.child("Density").getValue().toString();
                 String Temperature=dataSnapshot.child("Temperature").getValue().toString();
                 String Cost=dataSnapshot.child("Cost").getValue().toString();
                 String phontemp=dataSnapshot.child("phoneTemp").getValue().toString();
-                sensorTemp=Float.parseFloat(phontemp);
-                float sensordensity = Float.parseFloat(Density);
-                float senseTemp=Float.parseFloat(Temperature);
-                String tempp=String.valueOf(sensorTemp);
-                String per=calculate(senseTemp,sensorTemp,sensordensity);
-                quality.setText(per);
+                quality.setText(Quality);
                 quantity.setText(Quantity+"L");
                 petcost.setText("₹"+Cost);
                 density.setText(Density+"kg/m3");
-                temperature.setText(tempp+"°C");
+                temperature.setText(Temperature+"°C");
 
             }
 
@@ -173,7 +166,8 @@ public class SensorAct extends AppCompatActivity {
         NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(SensorAct.this);
         notificationManagerCompat.notify(1, builder.build());
     }
-    public String calculate(float temp0, float temp, float den){
+    /*public String calculate(float temp0, float temp, float den){
+        //reference1=FirebaseDatabase.getInstance().getReference("Data").child("current status");
         float temp1=0,temp2=0,ipDensity=0,k=(float) 0.01;
         String percent;
         float result=ipDensity/(((temp1-temp2)*k)+1);
@@ -187,7 +181,7 @@ public class SensorAct extends AppCompatActivity {
             return percent="80";
         }
 
-    }
+    }*/
     @Override
     protected void onDestroy() {
         super.onDestroy();
