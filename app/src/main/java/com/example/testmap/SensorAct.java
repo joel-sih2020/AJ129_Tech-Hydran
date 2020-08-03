@@ -99,7 +99,7 @@ public class SensorAct extends AppCompatActivity {
                 String Density= dataSnapshot.child("Density").getValue().toString();
                 String Temperature=dataSnapshot.child("Temperature").getValue().toString();
                 String Cost=dataSnapshot.child("Cost").getValue().toString();
-                String phontemp=dataSnapshot.child("phoneTemp").getValue().toString();
+                String phontemp=dataSnapshot.child("Temperature").getValue().toString();
                 quality.setText(Quality);
                 quantity.setText(Quantity+"L");
                 petcost.setText("₹"+Cost);

@@ -50,7 +50,7 @@ public class UpdateData extends AppCompatActivity {
         Random number = new Random();
         int num = number.nextInt(50);
         final int qntyy = number.nextInt(10);
-        final float cost = (float) (qntyy*86.3);
+        final float cost = (float) (qntyy*86.34);
         String qltyyy=String.valueOf(qltyy);
         qlty1.setText(qltyyy+"%");
         qnty1.setText(String.valueOf(qntyy));
